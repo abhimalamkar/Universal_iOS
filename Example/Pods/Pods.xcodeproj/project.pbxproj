@@ -10,6 +10,8 @@
 		0D5AB4C22992B1968DECD270965F22AA /* Universal_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8EFC697AC25C199F96EC9AA0CA7B9 /* Universal_iOS-dummy.m */; };
 		328B0102BF47EE51643DBEC1C15CE278 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		458EC5B21F9FF97300D84440 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC5B11F9FF97300D84440 /* UIColorExtensions.swift */; };
+		458EC5B71FA02AC400D84440 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC5B61FA02AC400D84440 /* BaseTableView.swift */; };
+		458EC5B91FA02B3100D84440 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC5B81FA02B3100D84440 /* UIViewExtension.swift */; };
 		80666F0AEDFB44E22EC5BD95391957EA /* Pods-Universal_iOS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B68538C3A287F8402BF10B6389522C1 /* Pods-Universal_iOS_Tests-dummy.m */; };
 		8EF276D4956252E7904893C2AE004196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		A5B68D5D080E506A8255CAA63D5F4CA1 /* Pods-Universal_iOS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E5C8B90B3285126CA6271BB8848675C /* Pods-Universal_iOS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +40,8 @@
 		3B68538C3A287F8402BF10B6389522C1 /* Pods-Universal_iOS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Universal_iOS_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E5C8B90B3285126CA6271BB8848675C /* Pods-Universal_iOS_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Universal_iOS_Tests-umbrella.h"; sourceTree = "<group>"; };
 		458EC5B11F9FF97300D84440 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		458EC5B61FA02AC400D84440 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		458EC5B81FA02B3100D84440 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4956F64F3C0AC0370C949F1BD8820E21 /* Pods-Universal_iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Universal_iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC9517D69BB790B1DE4BC9099108875 /* Pods-Universal_iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Universal_iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5056EF9E061EAA44B29D26C85AF9E342 /* Pods-Universal_iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Universal_iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -114,8 +118,17 @@
 			isa = PBXGroup;
 			children = (
 				458EC5B11F9FF97300D84440 /* UIColorExtensions.swift */,
+				458EC5B81FA02B3100D84440 /* UIViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		458EC5B51FA02A7900D84440 /* UITableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				458EC5B61FA02AC400D84440 /* BaseTableView.swift */,
+			);
+			path = UITableVIew;
 			sourceTree = "<group>";
 		};
 		69D1FA927795883470002BBA1182A71A /* Support Files */ = {
@@ -207,6 +220,7 @@
 		CEE46FA9F772214DDFE18FE32CFD2E3B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				458EC5B51FA02A7900D84440 /* UITableVIew */,
 				458EC5B01F9FF94A00D84440 /* Extension */,
 			);
 			path = Classes;
@@ -367,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				458EC5B21F9FF97300D84440 /* UIColorExtensions.swift in Sources */,
+				458EC5B71FA02AC400D84440 /* BaseTableView.swift in Sources */,
+				458EC5B91FA02B3100D84440 /* UIViewExtension.swift in Sources */,
 				F7A0A634F08A4CAB17C3252AE452B51B /* Pods-Universal_iOS_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
