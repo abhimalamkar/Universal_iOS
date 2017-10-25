@@ -1,0 +1,16 @@
+PODS:
+  - Universal_iOS (0.1.0)
+
+DEPENDENCIES:
+  - Universal_iOS (from `../`)
+
+EXTERNAL SOURCES:
+  Universal_iOS:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Universal_iOS: 77481beec97638fe3a393635c97b1ceb1558085d
+
+PODFILE CHECKSUM: 7b139450429ac371926068c8134f84da6d3a1d6d
+
+COCOAPODS: 1.1.1

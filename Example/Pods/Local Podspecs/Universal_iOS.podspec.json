@@ -1,0 +1,22 @@
+{
+  "name": "Universal_iOS",
+  "version": "0.1.0",
+  "summary": "A short description of Universal_iOS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/abhimalamkar/Universal_iOS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "abhimalamkar": "abhijeetmalamkar@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/abhimalamkar/Universal_iOS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Universal_iOS/Classes/**/*"
+}
