@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Universal code to start ios project
+  Universal code to start ios project
                        DESC
 
   s.homepage         = 'https://github.com/abhimalamkar/Universal_iOS'
@@ -38,5 +38,10 @@ Universal code to start ios project
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    #s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'Firebase', '~> 4.7'
+    s.dependency 'Firebase/Database', '~> 4.7'
+    s.dependency 'Firebase/Auth', '~> 4.7'
+    s.dependency 'Firebase/Storage', '~> 4.7'
+
 end

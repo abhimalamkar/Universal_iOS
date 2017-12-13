@@ -37,11 +37,11 @@ public class VideoPlayerView: UIView {
     
     var isPlaying = false
     
-    public func handlePause(){
+    @objc public func handlePause(){
         if isPlaying {
             player?.pause()
             pausePlayButton.setImage(UIImage(named:"play"), for: .normal)
-        }else {
+        } else {
             player?.play()
             pausePlayButton.setImage(UIImage(named:"pause"), for: .normal)
         }
@@ -78,7 +78,7 @@ public class VideoPlayerView: UIView {
         return slider
     }()
     
-    func handleSliderChange(){
+    @objc func handleSliderChange(){
         if let duration = player?.currentItem?.duration {
             let totalSeconds = CMTimeGetSeconds(duration)
             
@@ -128,7 +128,7 @@ public class VideoPlayerView: UIView {
         currentTimeLable.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         controlsContainerView.addSubview(videoSlider)
-        
+
         videoSlider.rightAnchor.constraint(equalTo: videoLengthLabel.leftAnchor).isActive = true
         videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         videoSlider.leftAnchor.constraint(equalTo: currentTimeLable.rightAnchor).isActive = true

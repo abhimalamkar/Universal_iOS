@@ -1,15 +1,15 @@
 {
   "name": "Universal_iOS",
   "version": "0.1.0",
-  "summary": "A short description of Universal_iOS.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Universal ios code",
+  "description": "Universal code to start ios project",
   "homepage": "https://github.com/abhimalamkar/Universal_iOS",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "abhimalamkar": "abhijeetmalamkar@gmail.com"
+    "Abhijeet Malamkar": "abhijeetmalamkar@gmail.com"
   },
   "source": {
     "git": "https://github.com/abhimalamkar/Universal_iOS.git",
@@ -18,5 +18,20 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Universal_iOS/Classes/**/*"
+  "source_files": "Universal_iOS/Classes/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Firebase": [
+      "~> 4.7"
+    ],
+    "Firebase/Database": [
+      "~> 4.7"
+    ],
+    "Firebase/Auth": [
+      "~> 4.7"
+    ],
+    "Firebase/Storage": [
+      "~> 4.7"
+    ]
+  }
 }
