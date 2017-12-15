@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
    s.frameworks = 'UIKit'
     #s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'Firebase', '~> 4.7'
-    s.dependency 'Firebase/Database', '~> 4.7'
+    s.dependency 'Firebase/Database', '~> 4.6'
     s.dependency 'Firebase/Auth', '~> 4.7'
     s.dependency 'Firebase/Storage', '~> 4.7'
 #s.dependency 'SnapKit', '~> 4.0.0'
