@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/abhimalamkar/Universal_iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/abhimalamkar'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Universal_iOS/Classes/**/*'
   
@@ -39,10 +39,10 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
     #s.dependency 'AFNetworking', '~> 2.3'
-    s.dependency 'Firebase', '~> 4.7'
-    s.dependency 'Firebase/Database', '~> 4.7'
-    s.dependency 'Firebase/Auth', '~> 4.7'
-    s.dependency 'Firebase/Storage', '~> 4.7'
+    s.dependency 'Firebase', '~> 4.6'
+    s.dependency 'Firebase/Database', '~> 4.6'
+    s.dependency 'Firebase/Auth', '~> 4.6'
+    s.dependency 'Firebase/Storage', '~> 4.6'
 #s.dependency 'SnapKit', '~> 4.0.0'
 
 end
