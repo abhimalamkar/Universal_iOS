@@ -10,6 +10,32 @@ import UIKit
 @available(iOS 9.0, *)
 public extension UIView {
     
+    public func addShadow(opacity:Float,shadowRadius:CGFloat){
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = shadowRadius
+    }
+    
+    public func shake(numberOfShakes shakes: Float, revert: Bool) {
+        //let animation = CABasicAnimation(keyPath: "position")
+        
+        //        animation.duration = 0.05
+        //        animation.repeatCount = 5
+        //        animation.autoreverses = true
+        //        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 4, y: self.center.y))
+        //        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 4, y: self.center.y))
+        //
+        //        self.layer.add(animation, forKey: "position")
+        let shake: CABasicAnimation = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.07
+        shake.repeatCount = shakes
+        if revert { shake.autoreverses = true  } else { shake.autoreverses = false }
+        shake.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+        shake.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+        self.layer.add(shake, forKey: "position")
+    }
+    
     public func anchorToTop(_ top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {
         
         anchorWithConstantsToTop(top, left: left, bottom: bottom, right: right, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)

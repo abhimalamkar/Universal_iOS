@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class User: NSObject {
+open class User: NSObject {
     var id:String?
     var name:String?
     var email:String?
@@ -27,5 +27,9 @@ public class User: NSObject {
     
     public var Email:String {
         return email!
+    }
+    
+    public var ImageURL:String {
+        return profile_image_url!
     }
 }

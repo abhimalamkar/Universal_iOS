@@ -43,5 +43,6 @@ Pod::Spec.new do |s|
     s.dependency 'Firebase/Database', '~> 4.7'
     s.dependency 'Firebase/Auth', '~> 4.7'
     s.dependency 'Firebase/Storage', '~> 4.7'
+#s.dependency 'SnapKit', '~> 4.0.0'
 
 end

@@ -10,6 +10,31 @@ import WebKit
 
 public extension String {
     
+   public func grabData() -> String {
+        var text = ""
+        guard let myURL = URL(string: self) else {
+            print("Error: \(self) doesn't seem to be a valid URL")
+            return ""
+        }
+        
+        do {
+            text = try String(contentsOf: myURL, encoding: .ascii)
+        }
+            
+        catch let error {
+            print("Error: \(error)")
+        }
+        
+        return text
+    }
+    
+    public func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        
+        return boundingBox.height
+    }
+    
     public func callNumber() {
         if isPhoneNumber {
         if let phoneCallURL = URL(string: "tel://\(self)") {
@@ -23,6 +48,12 @@ public extension String {
             }
         }
     }
+    }
+    
+    public static func estimatedFrameForText(text:String,fontSize:CGFloat) -> CGRect {
+        let size = CGSize(width: 1000, height: 10000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: fontSize)], context: nil)
     }
     
     public func openUrl() {

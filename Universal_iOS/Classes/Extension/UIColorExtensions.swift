@@ -10,6 +10,10 @@ import UIKit
 
 public extension UIColor {
     
+    public convenience init(rgb: Int, alpha: CGFloat = 1.0) {
+        self.init(red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0, green: CGFloat((rgb & 0xFF00) >> 8) / 255.0, blue: CGFloat(rgb & 0xFF) / 255.0, alpha: alpha)
+    }
+    
     public convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt32()

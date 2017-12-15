@@ -1,6 +1,0 @@
-framework module Universal_iOS {
-  umbrella header "Universal_iOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
