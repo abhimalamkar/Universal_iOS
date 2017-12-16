@@ -17,6 +17,10 @@ public extension UIView {
         layer.shadowRadius = shadowRadius
     }
     
+    public func removeAll(){
+        self.window!.rootViewController?.dismiss(animated: false, completion: nil)
+    }
+    
     public func shake(numberOfShakes shakes: Float, revert: Bool) {
         //let animation = CABasicAnimation(keyPath: "position")
         

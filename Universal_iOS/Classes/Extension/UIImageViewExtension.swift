@@ -11,8 +11,11 @@ let imageCache = NSCache<NSString, AnyObject>()
 
 public extension UIImageView {
     
-    func loadImageUsingCacheUrlString(urlString:String){
-        
+    public func loadImageUsingCacheUrlString(urlString:String){
+        if urlString.isEmpty {
+            self.image = nil
+            return
+        }
         image = nil
         
         //check cache array first
@@ -33,12 +36,8 @@ public extension UIImageView {
                     imageCache.setObject(image, forKey: urlString as NSString)
                     self.image = UIImage(data: data!)
                 }
-                
-                
             }
-            
         }
-        
         task.resume()
     }
     

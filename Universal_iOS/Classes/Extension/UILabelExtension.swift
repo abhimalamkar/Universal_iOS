@@ -15,6 +15,4 @@ public extension UILabel {
         return view
     }
     
-    
-    
 }
