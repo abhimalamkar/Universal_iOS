@@ -28,11 +28,11 @@ public extension String {
         return text
     }
     
-    public func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
+    public func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGRect {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
-        return boundingBox.height
+        return boundingBox
     }
     
     public func callNumber() {
@@ -47,7 +47,7 @@ public extension String {
                 }
             }
         }
-    }
+      }
     }
     
     public static func estimatedFrameForText(text:String,fontSize:CGFloat) -> CGRect {

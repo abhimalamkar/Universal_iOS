@@ -26,7 +26,7 @@ open class User: NSObject {
     }
     
     public var Email:String {
-        return email!
+        return email != nil ? email! : ""
     }
     
     public var ImageURL:String {
