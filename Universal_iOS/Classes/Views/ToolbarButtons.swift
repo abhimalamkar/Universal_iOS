@@ -12,6 +12,8 @@ public class ToolbarButtons {
     
     public var buttons:[UIButton]?
     
+    public var rightButtonWidthConstraint:NSLayoutConstraint?
+    
     public init(view:UIView){
         buttons = [UIButton]()
         
@@ -39,7 +41,8 @@ public class ToolbarButtons {
         rightButton.rightAnchor.constraint(equalTo: view.rightAnchor,constant:-8).isActive = true
         rightButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         rightButton.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-        rightButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        rightButtonWidthConstraint = rightButton.widthAnchor.constraint(equalToConstant: 100)
+        rightButtonWidthConstraint?.isActive = true
         
         buttons?.append(leftButton)
         buttons?.append(rightButton)

@@ -24,12 +24,13 @@ public extension UIImageView {
             return
         }
         
-        let url = URL(string: urlString)
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        if let url = URL(string: urlString) {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error as Any)
                 return
             }
+            
             DispatchQueue.main.async {
                 
                 if let image = UIImage(data: data!) {
@@ -38,7 +39,9 @@ public extension UIImageView {
                 }
             }
         }
+        
         task.resume()
+        }
     }
     
 }
