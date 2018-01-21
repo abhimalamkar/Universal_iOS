@@ -99,6 +99,18 @@ public extension String {
         }
     }
     
+    public func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.width
+    }
+    
+    public func heightOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.height
+    }
+    
     //validate Password
     public var isValidPassword: Bool {
         do {
