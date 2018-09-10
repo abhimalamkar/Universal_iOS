@@ -50,6 +50,7 @@ public extension String {
       }
     }
     
+
     public static func estimatedFrameForText(text:String,fontSize:CGFloat) -> CGRect {
         let size = CGSize(width: 1000, height: 10000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
@@ -119,10 +120,10 @@ public extension String {
                 
                 if(self.count>=6 && self.count<=20){
                     return true
-                }else{
+                } else{
                     return false
                 }
-            }else{
+            } else{
                 return false
             }
         } catch {
@@ -130,9 +131,31 @@ public extension String {
         }
     }
     
+    public func getDate(inFormat:String,toFormat:String) -> String? {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = inFormat
+        dateFormatterGet.timeZone = NSTimeZone.default
+        let date: Date? = dateFormatterGet.date(from: self)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = toFormat
+
+        if date == nil {
+            return "Wrong format/Wrong Date"
+        }
+        
+        return dateFormatter.string(from: date!)
+    }
+    
     public var isNumber: Bool {
         let numberCharacters = NSCharacterSet.decimalDigits.inverted
         return !self.isEmpty && self.rangeOfCharacter(from: numberCharacters) == nil
     }
     
+}
+
+public extension NSLayoutConstraint {
+    public func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: self.firstItem, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
+    }
 }

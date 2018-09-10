@@ -72,24 +72,24 @@ public class CustomSearchController: UISearchController, UISearchBarDelegate {
     
     // MARK: UISearchBarDelegate functions
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         customDelegate.didStartSearching()
     }
     
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         customSearchBar.resignFirstResponder()
         customDelegate.didTapOnSearchButton()
     }
     
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         customSearchBar.resignFirstResponder()
         customDelegate.didTapOnCancelButton()
     }
     
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         customDelegate.didChangeSearchText(searchText: searchText)
     }
     
